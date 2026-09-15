@@ -1,0 +1,10 @@
+opencv-python
+numpy
+pillow
+matplotlib
+scikit-image
+scikit-learn
+pandas
+joblib
+flask
+flask-cors
