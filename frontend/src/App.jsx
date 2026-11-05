@@ -114,7 +114,7 @@ function App() {
       link.click();
       link.remove();
       window.URL.revokeObjectURL(url);
-    } catch (err) {
+    } catch {
       setError("Unable to download stego image.");
     }
   };

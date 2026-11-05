@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Navbar({ activeTab, setActiveTab, serverOnline }) {
   const tabs = [
     { id: 'embed', label: 'Embed Studio', icon: '🔒' },
@@ -31,7 +29,7 @@ export default function Navbar({ activeTab, setActiveTab, serverOnline }) {
       </nav>
 
       <div className="server-badge">
-        <span className={`status-dot ${serverOnline ? '' : 'offline'}`} style={{ backgroundColor: serverOnline ? '#10b981' : '#f43f5e' }} />
+        <span className={`status-dot ${serverOnline ? '' : 'offline'}`} style={{ backgroundColor: serverOnline ? '#22C55E' : '#EF4444' }} />
         <span>{serverOnline ? 'Flask API: Online' : 'Connecting API...'}</span>
       </div>
     </header>

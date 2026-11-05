@@ -165,9 +165,9 @@ def embed_pair_adaptive(
 
     requested_bits = int(requested_bits)
 
-    if requested_bits not in [5, 6, 7, 8]:
+    if requested_bits not in range(1, 9):
         raise ValueError(
-            "requested_bits must be 5, 6, 7, or 8"
+            "requested_bits must be between 1 and 8"
         )
 
     difference = pixel_difference(p1, p2)

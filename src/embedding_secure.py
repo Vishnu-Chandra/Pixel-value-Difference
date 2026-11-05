@@ -69,14 +69,15 @@ def embed_block(
                 len(secret_bits) - bit_position
             )
 
-            # Need a complete EPVD segment
-            if remaining < requested_bits:
-                return block, bit_position, embedded
+            segment_bits = min(
+                requested_bits,
+                remaining
+            )
 
             secret_segment = "".join(
                 str(b) for b in secret_bits[
                     bit_position:
-                    bit_position + requested_bits
+                    bit_position + segment_bits
                 ]
             )
 
@@ -94,7 +95,7 @@ def embed_block(
                     p1,
                     p2,
                     secret_segment,
-                    requested_bits
+                    segment_bits
                 )
 
             except ValueError:

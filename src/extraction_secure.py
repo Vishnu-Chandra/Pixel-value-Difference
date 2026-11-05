@@ -56,10 +56,15 @@ def extract_from_block(
 
             try:
 
+                expected_bits = min(
+                    requested_bits,
+                    remaining_bits - len(extracted)
+                )
+
                 bits, actual_bits = extract_pair(
                     p1,
                     p2,
-                    requested_bits
+                    expected_bits
                 )
 
             except ValueError:

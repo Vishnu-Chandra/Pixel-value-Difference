@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function KeySensitivity() {
   const [correctKey, setCorrectKey] = useState('AI_EPVD_2026');

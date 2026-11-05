@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function EmbedPanel() {
   const [cover, setCover] = useState('lena.png');
