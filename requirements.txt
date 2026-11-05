@@ -8,3 +8,4 @@ pandas
 joblib
 flask
 flask-cors
+gunicorn

@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API = "http://127.0.0.1:5000";
+const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
 
 function App() {
   const [activeTab, setActiveTab] = useState("embed");
